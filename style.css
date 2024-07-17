@@ -2,9 +2,15 @@
   max-width: 1000px;
   border: 1px solid black;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(10px, 25%));
+  height: 400px;
+  margin: 0 auto;
 }
 .bookDiv {
   height: 400px;
   text-align: center;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
