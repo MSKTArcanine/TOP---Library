@@ -1,0 +1,10 @@
+#library {
+  max-width: 1000px;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+.bookDiv {
+  height: 400px;
+  text-align: center;
+}

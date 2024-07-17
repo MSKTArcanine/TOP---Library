@@ -9,3 +9,8 @@ function Book(title, pages, read) {
 function addBookToLibrary(book) {
   myLibrary.push(book);
 }
+
+function addBookToHTMLLibrary(book) {
+  const bookDiv = document.createElement("div");
+  bookDiv.TEXT_NODE = book.title;
+}
