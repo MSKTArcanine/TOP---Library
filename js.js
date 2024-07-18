@@ -10,4 +10,11 @@ function addBookToLibrary(book) {
   myLibrary.push(book);
 }
 
-function addBookToHTMLLibrary(book) {}
+function addBookToHTMLLibrary() {
+  myLibrary.forEach((item) => {
+    const divBook = document.createElement("div");
+    divBook.classList.add("bookDiv");
+    divBook.textContent = item.title;
+    document.querySelector("#library").appendChild(divBook);
+  });
+}

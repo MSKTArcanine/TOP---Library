@@ -18,6 +18,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   margin: auto;
   border: 1px solid black;
+  height: auto;
 }
 .bookDiv {
   height: 400px;
@@ -29,7 +30,7 @@ body {
 }
 #form {
   position: absolute;
-  left: 50%;
+  left: 10%;
   top: 50%;
   transform: translate(-50%, -50%);
   width: 200px;
