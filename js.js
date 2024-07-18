@@ -1,4 +1,5 @@
 const myLibrary = [];
+const DOMLIBRARY = document.querySelector("#library");
 
 function Book(title, pages, read) {
   this.title = title || "Anonymous";
@@ -12,6 +13,12 @@ function addBookToLibrary() {
 }
 
 function addBookToHTMLLibrary() {}
+
+function deleteExistingDOM() {
+  while (DOMLIBRARY.firstChild) {
+    DOMLIBRARY.lastChild.remove();
+  }
+}
 
 // INPUTs
 function createBook() {
