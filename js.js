@@ -8,12 +8,6 @@ function Book(title, pages, read) {
 
 function addBookToLibrary(book) {
   myLibrary.push(book);
-  addBookToHTMLLibrary(book);
 }
 
-function addBookToHTMLLibrary(book) {
-  const bookDiv = document.createElement("div");
-  bookDiv.classList.add("bookDiv");
-  bookDiv.textContent = book.title;
-  document.querySelector("#library").appendChild(bookDiv);
-}
+function addBookToHTMLLibrary(book) {}
