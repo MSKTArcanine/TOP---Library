@@ -12,7 +12,19 @@ function addBookToLibrary() {
   myLibrary.push(book);
 }
 
-function addBookToHTMLLibrary() {}
+function addBookToHTMLLibrary() {
+  deleteExistingDOM();
+  addBookToLibrary();
+
+  myLibrary.forEach((item) => {
+    const bookDiv = document.createElement("div");
+    bookDiv.classList.add("bookDiv");
+    bookDiv.textContent = item.title;
+    DOMLIBRARY.appendChild(bookDiv);
+  });
+
+  document.querySelector("form").reset();
+}
 
 function deleteExistingDOM() {
   while (DOMLIBRARY.firstChild) {
@@ -34,5 +46,5 @@ function createBook() {
 const SUBMITBUTTON = document.querySelector("button");
 SUBMITBUTTON.addEventListener("click", function (e) {
   e.preventDefault();
-  addBookToLibrary();
+  addBookToHTMLLibrary();
 });
