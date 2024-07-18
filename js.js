@@ -22,3 +22,10 @@ function createBook() {
   ).value;
   return new Book(getTitle, getPages, getHasRead);
 }
+
+//SUMBIT
+const SUBMITBUTTON = document.querySelector("button");
+SUBMITBUTTON.addEventListener("click", function (e) {
+  e.preventDefault();
+  addBookToLibrary();
+});
