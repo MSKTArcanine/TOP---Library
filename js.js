@@ -6,15 +6,19 @@ function Book(title, pages, read) {
   this.read = read || false;
 }
 
-function addBookToLibrary(book) {
+function addBookToLibrary() {
+  const book = createBook();
   myLibrary.push(book);
 }
 
-function addBookToHTMLLibrary() {
-  myLibrary.forEach((item) => {
-    const divBook = document.createElement("div");
-    divBook.classList.add("bookDiv");
-    divBook.textContent = item.title;
-    document.querySelector("#library").appendChild(divBook);
-  });
+function addBookToHTMLLibrary() {}
+
+// INPUTs
+function createBook() {
+  const getTitle = document.querySelector("input").value;
+  const getPages = document.querySelector("input[type=number]").value;
+  const getHasRead = document.querySelector(
+    "input[name=hasRead]:checked"
+  ).value;
+  return new Book(getTitle, getPages, getHasRead);
 }
