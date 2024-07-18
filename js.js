@@ -18,9 +18,16 @@ function addBookToHTMLLibrary() {
 
   myLibrary.forEach((item) => {
     const bookDiv = document.createElement("div");
+    const buttonDelete = document.createElement("button");
     bookDiv.classList.add("bookDiv");
     bookDiv.textContent = item.title;
     DOMLIBRARY.appendChild(bookDiv);
+    buttonDelete.classList.add("buttonDelete");
+    buttonDelete.addEventListener("click", function () {
+      this.parentNode.remove();
+    });
+    buttonDelete.textContent = "DELETE";
+    bookDiv.appendChild(buttonDelete);
   });
 
   document.querySelector("form").reset();
